@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CONCEPT / PITCH DEMO — keep out of search until approved -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#A83E1A">
+<title>Home Maid Cafe — Kihei's hole-in-the-wall for loco moco & malasadas</title>
+<meta name="description" content="A family-run Kihei breakfast spot in Azeka Shopping Center. Loco moco, hand-made malasadas, Portuguese sausage, and plate lunches — Monday through Saturday from 6:30am.">
+<meta property="og:title" content="Home Maid Cafe — breakfast like you live here">
+<meta property="og:description" content="Kihei's local gem for loco moco and hand-made malasadas. Open Mon–Sat 6:30am–2pm.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/04_04__square.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="images/05_05__square.jpg" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Home Maid Cafe","image":"images/04_04__square.jpg","address":{"@type":"PostalAddress","streetAddress":"1280 S Kihei Rd #106","addressLocality":"Kihei","addressRegion":"HI","postalCode":"96753","addressCountry":"US"},"telephone":"+1-808-874-6035","servesCuisine":["Hawaiian","Breakfast","Brunch"],"priceRange":"$","openingHours":"Mo-Sa 06:30-14:00","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","reviewCount":"378"}}
+</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+  :root{
+    --bg:#FBF4E9; --surface:#EFE2CD; --primary:#A83E1A; --accent:#E0962E;
+    --gold-ink:#855415; --text:#2C1E14; --muted:#6A5848;
+    --line:#E0CFB4; --ring:rgba(168,62,26,.55);
+    --display:"Fraunces",Georgia,serif; --body:"Hanken Grotesk",system-ui,sans-serif;
+    --maxw:1140px; --r:14px;
+    --shadow:0 18px 44px -24px rgba(44,30,20,.45);
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    background:var(--bg);color:var(--text);font-family:var(--body);
+    font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+    background-image:radial-gradient(rgba(168,62,26,.05) 1px,transparent 1px);background-size:5px 5px;
+  }
+  h1,h2,h3{font-family:var(--display);line-height:1.05;font-weight:600;letter-spacing:-.015em}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    font-family:var(--body);font-weight:600;font-size:.78rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--gold-ink);display:inline-flex;align-items:center;gap:.6rem;
+  }
+  .eyebrow::before{content:"";width:26px;height:26px;flex:none;
+    background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 3C28 6 37 5 36 14c-1 8 4 10 1 17-3 6-11 4-17 5-7 1-16 1-17-8C2 19-2 14 5 9 9 6 13 5 20 3Z' fill='none' stroke='%23A83E1A' stroke-width='2'/%3E%3C/svg%3E");}
+
+  /* ---- header ---- */
+  .skip{position:absolute;left:-999px;top:0;background:var(--primary);color:#fff;padding:.7rem 1.1rem;border-radius:0 0 8px 0;z-index:200}
+  .skip:focus{left:0}
+  header{position:sticky;top:0;z-index:100;background:rgba(251,244,233,.85);backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s,background .3s}
+  header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 26px -18px rgba(44,30,20,.5);background:rgba(251,244,233,.95)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-family:var(--display);font-weight:600;font-size:1.32rem;letter-spacing:-.02em;text-decoration:none}
+  .brand span{color:var(--primary)}
+  .nav-links{display:flex;gap:2rem;align-items:center;list-style:none}
+  .nav-links a{text-decoration:none;font-weight:500;font-size:.98rem;color:var(--text);padding:.4rem 0;position:relative}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--primary);transition:width .25s var(--ease)}
+  .nav-links a:hover::after,.nav-links a:focus-visible::after{width:100%}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;background:var(--primary);color:#fff;text-decoration:none;
+    font-weight:600;font-size:1rem;padding:.85rem 1.5rem;border-radius:999px;border:0;cursor:pointer;
+    transition:transform .22s var(--ease),box-shadow .22s var(--ease),background .22s var(--ease);min-height:48px;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px -10px rgba(168,62,26,.7);background:#92350f}
+  .btn:active{transform:translateY(0)}
+  .nav-links a.btn{color:#fff}.nav-links a.btn::after{display:none}
+  .btn-ghost{background:transparent;color:var(--primary);border:1.5px solid var(--primary)}
+  .btn-ghost:hover{background:var(--primary);color:#fff}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;padding:10px;min-height:48px;min-width:48px}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--text);margin:5px 0;transition:.3s var(--ease)}
+  .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+  /* ---- hero ---- */
+  .hero{padding:72px 0 96px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2.8rem,6vw,4.8rem);font-weight:600}
+  .hero h1 em{font-style:italic;color:var(--primary)}
+  .hero .lede{font-size:1.2rem;color:var(--muted);max-width:30ch;margin:1.4rem 0 1rem}
+  .stars{color:var(--gold-ink);font-weight:600;font-size:.95rem;margin-bottom:1.8rem;display:flex;gap:.5rem;align-items:center}
+  .stars b{color:var(--text)}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+  .hours-chip{font-size:.9rem;color:var(--muted);display:flex;align-items:center;gap:.5rem}
+  .hours-chip b{color:var(--text)}
+  .hero-figure{position:relative;justify-self:center}
+  .hero-figure .ring{position:absolute;inset:-26px;z-index:0}
+  .hero-figure img{position:relative;z-index:1;border-radius:50% 50% 48% 52%/52% 50% 50% 48%;
+    width:min(420px,80vw);aspect-ratio:1/1.08;object-fit:cover;box-shadow:var(--shadow)}
+  .tag{position:absolute;z-index:2;background:var(--surface);border:1px solid var(--line);border-radius:999px;
+    padding:.5rem 1rem;font-size:.85rem;font-weight:600;box-shadow:var(--shadow)}
+  .tag-1{top:8%;right:-4%}
+  .tag-2{bottom:10%;left:-6%;color:var(--primary)}
+
+  /* ---- section rhythm ---- */
+  section{padding:96px 0}
+  .section-head{max-width:34ch}
+  .section-head h2{font-size:clamp(2rem,4vw,3rem);margin:.5rem 0}
+  .lead{color:var(--muted);font-size:1.12rem;max-width:56ch}
+
+  /* ---- signature band ---- */
+  .signature{background:var(--surface)}
+  .sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .sig-grid.flip{direction:rtl}.sig-grid.flip>*{direction:ltr}
+  .sig-grid img{border-radius:var(--r);width:100%;aspect-ratio:4/3;object-fit:cover;box-shadow:var(--shadow)}
+  .sig-text h3{font-size:1.9rem;margin:.4rem 0 .7rem}
+  .sig-text p{color:var(--muted)}
+
+  /* ---- menu ---- */
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .dish{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;
+    transition:transform .28s var(--ease),box-shadow .28s var(--ease),border-color .28s}
+  .dish:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--accent)}
+  .dish h3{font-size:1.32rem;margin-bottom:.4rem}
+  .dish p{font-size:.96rem;color:var(--muted);margin-bottom:1rem}
+  .price{font-family:var(--body);font-weight:600;font-size:.82rem;letter-spacing:.04em;color:var(--gold-ink);
+    background:#fff5e3;border:1px dashed var(--accent);border-radius:7px;padding:.35rem .6rem;display:inline-block}
+
+  /* ---- story ---- */
+  .story{background:var(--primary);color:#fbeede}
+  .story .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+  .story img{border-radius:var(--r);width:100%;aspect-ratio:5/4;object-fit:cover;box-shadow:var(--shadow)}
+  .story h2{color:#fff;font-size:clamp(2rem,4vw,2.9rem)}
+  .story .eyebrow{color:#fbe6c6}
+  .story .eyebrow::before{filter:saturate(0) brightness(2.4)}
+  .story p{color:#f3ddc9;margin-top:1rem}
+  .story .statline{display:flex;gap:2.4rem;margin-top:2rem;flex-wrap:wrap}
+  .story .statline b{font-family:var(--display);font-size:2.1rem;color:#fff;display:block;line-height:1}
+  .story .statline span{font-size:.85rem;color:#fbe6c6}
+
+  /* ---- reviews ---- */
+  .reviews .r-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px}
+  .review{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;
+    transition:transform .28s var(--ease),box-shadow .28s var(--ease)}
+  .review:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .review .q{font-family:var(--display);font-size:1.22rem;line-height:1.4}
+  .review .who{margin-top:1.1rem;font-size:.9rem;color:var(--muted)}
+  .review .who b{color:var(--text)}
+  .review .rs{color:var(--gold-ink);letter-spacing:2px;font-size:.9rem}
+
+  /* ---- visit ---- */
+  .visit{background:var(--surface)}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:stretch}
+  .visit-card h2{font-size:clamp(2rem,4vw,2.7rem);margin:.4rem 0 1.4rem}
+  .vrow{display:flex;gap:.9rem;padding:.85rem 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .vrow svg{flex:none;margin-top:3px}
+  .vrow b{display:block}
+  .vrow span{color:var(--muted);font-size:.96rem}
+  .visit .map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:340px;box-shadow:var(--shadow);background:var(--surface)}
+  .visit .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+  .map-facade{width:100%;min-height:340px;height:100%;border:0;cursor:pointer;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:.5rem;font-family:var(--body);font-weight:600;color:var(--primary);
+    background:repeating-linear-gradient(45deg,#efe2cd,#efe2cd 16px,#e9dac0 16px,#e9dac0 32px);transition:filter .25s}
+  .map-facade:hover{filter:brightness(.97)}
+  .map-facade small{color:var(--muted);font-weight:500}
+  .visit-cta{margin-top:1.6rem;display:flex;gap:1rem;flex-wrap:wrap}
+
+  /* ---- gallery ---- */
+  .gallery{padding-bottom:104px}
+  .g-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+  .g-grid img{border-radius:10px;width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .35s var(--ease),filter .35s}
+  .g-grid img:hover{transform:scale(1.04);filter:saturate(1.08)}
+
+  /* ---- footer ---- */
+  footer{background:var(--text);color:#d8c9b8;padding:60px 0 30px}
+  footer .f-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start}
+  footer .brand{color:#fff;font-size:1.4rem}
+  footer a{color:#e0962e;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  footer .f-meta{font-size:.92rem;line-height:1.9}
+  footer .disclaimer{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem;color:#9c8a78;max-width:70ch}
+
+  /* ---- sticky mobile action bar (designed for phone) ---- */
+  .mobile-bar{display:none}
+
+  /* ---- motion: reveal + cascade (whisper, not slop) ---- */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+  .reveal.zoom{transform:scale(.95)}
+  .reveal.in{opacity:1;transform:none}
+  .cascade>.reveal:nth-child(2){transition-delay:.07s}
+  .cascade>.reveal:nth-child(3){transition-delay:.14s}
+  .cascade>.reveal:nth-child(4){transition-delay:.21s}
+  .cascade>.reveal:nth-child(5){transition-delay:.28s}
+  .cascade>.reveal:nth-child(6){transition-delay:.35s}
+  .cascade>.reveal:nth-child(7){transition-delay:.42s}
+  .cascade>.reveal:nth-child(8){transition-delay:.49s}
+  @media (prefers-reduced-motion:reduce){
+    .reveal,.reveal.zoom{opacity:1;transform:none;transition:none}
+    .btn:hover,.g-grid img:hover,.dish:hover,.review:hover{transform:none}
+  }
+
+  /* ---- responsive: designed for phone ---- */
+  @media (max-width:880px){
+    .hero-grid,.sig-grid,.story .wrap,.visit .wrap,.reviews .r-grid{grid-template-columns:1fr}
+    .sig-grid.flip{direction:ltr}
+    .menu-grid{grid-template-columns:1fr 1fr}
+    .g-grid{grid-template-columns:repeat(3,1fr)}
+    .story .wrap{gap:36px}
+    .hero{padding:40px 0 56px}
+    section{padding:64px 0}
+    .nav-links{position:fixed;inset:72px 0 auto 0;background:var(--bg);flex-direction:column;gap:0;
+      padding:8px 24px 24px;border-bottom:1px solid var(--line);transform:translateY(-130%);
+      transition:transform .34s var(--ease);box-shadow:var(--shadow)}
+    .nav-links.open{transform:none}
+    .nav-links li{width:100%;border-bottom:1px solid var(--line)}
+    .nav-links li:last-child{border:0;padding-top:12px}
+    .nav-links a{display:block;padding:.95rem 0}
+    .nav-links a.btn{justify-content:center}
+    .hamburger{display:block}
+    .hero-figure{order:-1}
+    .hero-figure img{width:min(360px,72vw)}
+    .tag-1{top:4%;right:0}
+    .tag-2{bottom:6%;left:0}
+  }
+  @media (max-width:760px){
+    body{padding-bottom:74px}
+    .mobile-bar{display:flex;align-items:center;gap:.8rem;position:fixed;left:0;right:0;bottom:0;z-index:95;
+      padding:10px 16px;background:rgba(251,244,233,.96);backdrop-filter:blur(12px);
+      border-top:1px solid var(--line);box-shadow:0 -10px 28px -20px rgba(44,30,20,.6)}
+    .mobile-bar .mb-info{display:flex;flex-direction:column;line-height:1.2;font-size:.8rem;color:var(--muted)}
+    .mobile-bar .mb-info b{font-family:var(--display);font-size:1rem;color:var(--text)}
+    .mobile-bar .btn{margin-left:auto;flex:0 0 auto}
+  }
+  @media (max-width:480px){
+    .menu-grid{grid-template-columns:1fr}
+    .g-grid{grid-template-columns:repeat(2,1fr)}
+    body{font-size:17px}
+    .hero h1{font-size:clamp(2.5rem,9vw,3.2rem)}
+    .visit-cta .btn{flex:1;justify-content:center}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href="#top">Home Maid <span>Cafe</span></a>
+    <ul class="nav-links" id="menu">
+      <li><a href="#signature">Signature</a></li>
+      <li><a href="#menu-sec">Menu</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a class="btn" href="tel:+18088746035">Call to order</a></li>
+    </ul>
+    <button class="hamburger" id="ham" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy cascade">
+      <span class="eyebrow reveal">Kihei · Azeka Shopping Center</span>
+      <h1 class="reveal">Breakfast like<br>you <em>live here.</em></h1>
+      <p class="lede reveal">The hole-in-the-wall locals drive across the island for — loco moco, hand-made malasadas, and Portuguese sausage, since 6:30 in the morning.</p>
+      <p class="stars reveal">★★★★½ &nbsp;<b>4.4</b> · 378 Google reviews</p>
+      <div class="hero-cta reveal">
+        <a class="btn" href="tel:+18088746035">Call to order · (808) 874-6035</a>
+        <span class="hours-chip">🍳 <span><b>Mon–Sat</b> 6:30a–2:00p · Sun closed</span></span>
+      </div>
+    </div>
+    <figure class="hero-figure reveal zoom">
+      <svg class="ring" viewBox="0 0 460 460" aria-hidden="true" fill="none">
+        <path d="M230 14C330 30 446 40 440 170c-6 120 30 150-10 230-44 88-150 50-210 46C100 488 16 470 18 320 22 110-30 70 70 38 120 22 150 6 230 14Z" stroke="var(--ring)" stroke-width="2.5" stroke-dasharray="3 9"/>
+      </svg>
+      <img src="images/05_05__square.jpg" alt="A plate of Home Maid Cafe's loco moco — rice topped with a hamburger patty, eggs, and brown gravy." width="420" height="454" decoding="async" fetchpriority="high">
+      <span class="tag tag-1">Best loco moco on the island</span>
+      <span class="tag tag-2">Malasadas made by hand</span>
+    </figure>
+  </div>
+</section>
+
+<!-- SIGNATURE -->
+<section class="signature" id="signature">
+  <div class="wrap">
+    <div class="sig-grid reveal">
+      <img src="images/03_03__square.jpg" alt="A box of fresh malasadas dusted in sugar at Home Maid Cafe." width="520" height="390" loading="lazy" decoding="async">
+      <div class="sig-text">
+        <span class="eyebrow">The reason people line up</span>
+        <h3>Malasadas, fried to order and rolled in sugar.</h3>
+        <p>Some folks come in just for these — pillowy Portuguese doughnuts, the cream-filled ones “not too sweet,” pulled hot from the fryer. Grab a box for the drive home, or eat one standing at the counter. No judgment.</p>
+      </div>
+    </div>
+    <div class="sig-grid flip reveal" style="margin-top:64px">
+      <img src="images/06_06__square.jpg" alt="A plate of golden French toast dusted with powdered sugar." width="520" height="390" loading="lazy" decoding="async">
+      <div class="sig-text">
+        <span class="eyebrow">From the griddle</span>
+        <h3>Loco moco, omelettes, and the best French toast around.</h3>
+        <p>Generous, customizable, and unfussy — the way a local breakfast should be. Spam and Portuguese-sausage breakfast sammies pack easy for the beach. This isn’t a resort buffet, and that’s the point.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu-sec">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What’s cooking</span>
+      <h2>The short, honest menu.</h2>
+      <p class="lead">A handful of things, done right, every morning. Prices below are placeholders for the concept — confirmed by the owner before launch.</p>
+    </div>
+    <div class="menu-grid cascade">
+      <article class="dish reveal"><h3>Breakfast Moco</h3><p>Rice, hamburger patty, eggs, and house brown gravy. The one they call the best on the island.</p><span class="price">$ — price TBD</span></article>
+      <article class="dish reveal"><h3>Malasadas</h3><p>Fried to order, rolled in sugar. Plain or cream-filled. Sold singly or by the box.</p><span class="price">$ — price TBD</span></article>
+      <article class="dish reveal"><h3>Build-Your-Own Omelette</h3><p>Three eggs, your meats and veg, hash browns on the side.</p><span class="price">$ — price TBD</span></article>
+      <article class="dish reveal"><h3>French Toast</h3><p>Thick-cut, golden, powdered sugar. “Best around,” per the regulars.</p><span class="price">$ — price TBD</span></article>
+      <article class="dish reveal"><h3>Spam &amp; Portuguese Sausage</h3><p>Local-style breakfast with two eggs and rice. Comfort in a plate.</p><span class="price">$ — price TBD</span></article>
+      <article class="dish reveal"><h3>Breakfast Sammies</h3><p>Egg, cheese, and your meat on the go — packs easy for the beach.</p><span class="price">$ — price TBD</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="wrap">
+    <img src="images/01_01__hero_wide.jpg" alt="Inside Home Maid Cafe — the counter and hand-written menu board." width="560" height="448" loading="lazy" decoding="async">
+    <div class="story-text reveal">
+      <span class="eyebrow">A Kihei hole-in-the-wall</span>
+      <h2>Family-run, and it tastes like it.</h2>
+      <p>Tucked into Azeka Shopping Center off South Kihei Road, Home Maid Cafe isn’t trying to impress anyone with the room — it’s the food and the welcome. Honeymooners come back three mornings in a row. Regulars get greeted by name. As one review put it: “the welcome mixed with great food makes me feel like I am home.”</p>
+      <div class="statline">
+        <div><b>4.4★</b><span>378 Google reviews</span></div>
+        <div><b>6:30a</b><span>open six days a week</span></div>
+        <div><b>$</b><span>local prices, local portions</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Straight from Google</span>
+      <h2>People don’t whisper about this place.</h2>
+    </div>
+    <div class="r-grid cascade">
+      <blockquote class="review reveal"><div class="rs">★★★★★</div><p class="q">“Truly the best loco moco on the island. Hole in the wall… this is a local gem.”</p><div class="who"><b>Daniel Kim</b> · Google review</div></blockquote>
+      <blockquote class="review reveal"><div class="rs">★★★★★</div><p class="q">“We discovered this hidden gem on our honeymoon and came back several times. The malasadas… oh my.”</p><div class="who"><b>Norma Boston</b> · Google review</div></blockquote>
+      <blockquote class="review reveal"><div class="rs">★★★★★</div><p class="q">“The welcome mixed with great food makes me feel like I am home. Best French toast around.”</p><div class="who"><b>Chris Parker</b> · Google review</div></blockquote>
+      <blockquote class="review reveal"><div class="rs">★★★★★</div><p class="q">“The restaurant was very busy and it makes sense why — the food was amazing and the staff were very nice.”</p><div class="who"><b>Michael Ferrara</b> · Google review</div></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="visit-card reveal">
+      <span class="eyebrow">Come hungry</span>
+      <h2>Find us in Azeka.</h2>
+      <div class="vrow">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A83E1A" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+        <span><b>1280 S Kihei Rd #106</b><span>Azeka Shopping Center · Kihei, HI 96753</span></span>
+      </div>
+      <div class="vrow">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A83E1A" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span><b>Mon–Saturday · 6:30am – 2:00pm</b><span>Closed Sunday</span></span>
+      </div>
+      <div class="vrow">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A83E1A" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+        <span><b>(808) 874-6035</b><span>Call ahead — takeout and malasadas by the box</span></span>
+      </div>
+      <div class="visit-cta">
+        <a class="btn" href="tel:+18088746035">Call to order</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Home%20Maid%20Cafe%20Kihei%20HI" target="_blank" rel="noopener">Get directions ↗</a>
+      </div>
+    </div>
+    <div class="map reveal">
+      <button class="map-facade" id="mapBtn" type="button" aria-label="Load interactive Google map">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#A83E1A" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+        Tap to load the map
+        <small>1280 S Kihei Rd #106, Kihei</small>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">On the plate</span><h2>A few mornings here.</h2></div>
+    <div class="g-grid cascade">
+      <img class="reveal" src="images/02_02__square.jpg" alt="A breakfast sandwich on toast." width="400" height="400" loading="lazy" decoding="async">
+      <img class="reveal" src="images/07_07__square.jpg" alt="A loaded local breakfast plate." width="400" height="400" loading="lazy" decoding="async">
+      <img class="reveal" src="images/10_10__square.jpg" alt="An omelette with hash browns." width="400" height="400" loading="lazy" decoding="async">
+      <img class="reveal" src="images/09_09__square.jpg" alt="Fried rice and eggs breakfast plate." width="400" height="400" loading="lazy" decoding="async">
+      <img class="reveal" src="images/06_06__square.jpg" alt="French toast dusted with powdered sugar." width="400" height="400" loading="lazy" decoding="async">
+      <img class="reveal" src="images/03_03__square.jpg" alt="Sugared malasadas in a box." width="400" height="400" loading="lazy" decoding="async">
+      <img class="reveal" src="images/08_08__square.jpg" alt="A breakfast plate with eggs." width="400" height="400" loading="lazy" decoding="async">
+      <img class="reveal" src="images/04_04__square.jpg" alt="The hand-lettered Home Maid Cafe storefront sign." width="400" height="400" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <div class="brand">Home Maid Cafe</div>
+        <p style="max-width:34ch;color:#b7a795;margin-top:.6rem">Kihei’s hole-in-the-wall for loco moco, malasadas, and a welcome that feels like home.</p>
+      </div>
+      <div class="f-meta">
+        1280 S Kihei Rd #106<br>Kihei, HI 96753<br>
+        <a href="tel:+18088746035">(808) 874-6035</a><br>
+        Mon–Sat 6:30a–2:00p · Sun closed<br>
+        <a href="https://www.facebook.com/Home-Maid-Cafe-186132031583440/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <p class="disclaimer">Unofficial concept design by Frontline Web Designs — not the official Home Maid Cafe website. Prices shown are placeholders pending the owner. Photos sourced from the Google business listing (contributor-credited); usage rights to be confirmed before any public launch.</p>
+  </div>
+</footer>
+
+<!-- sticky phone action bar -->
+<div class="mobile-bar" aria-label="Quick actions">
+  <div class="mb-info"><b>Home Maid Cafe</b><span>Open Mon–Sat · 6:30a–2p</span></div>
+  <a class="btn" href="tel:+18088746035">Call to order</a>
+</div>
+
+<script>
+  // mobile nav
+  var ham=document.getElementById('ham'),menu=document.getElementById('menu');
+  ham.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    ham.setAttribute('aria-expanded',open);
+    ham.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');ham.setAttribute('aria-expanded',false);ham.setAttribute('aria-label','Open menu');}});
+
+  // header shadow on scroll + scroll-reveal (reveals anything at/above the fold,
+  // so anchor-jumps never leave a section stuck hidden)
+  var header=document.querySelector('header');
+  var reveals=[].slice.call(document.querySelectorAll('.reveal'));
+  function showInView(){
+    for(var i=reveals.length-1;i>=0;i--){
+      if(reveals[i].getBoundingClientRect().top < window.innerHeight*0.92){
+        reveals[i].classList.add('in');reveals.splice(i,1);
+      }
+    }
+  }
+  function onScroll(){showInView();header.classList.toggle('scrolled',window.scrollY>8);}
+  showInView();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',showInView);
+
+  // map facade — load the heavy Google iframe only on demand (keeps first load fast)
+  var mapBtn=document.getElementById('mapBtn');
+  if(mapBtn){mapBtn.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.title='Map to Home Maid Cafe, 1280 S Kihei Rd, Kihei HI';
+    f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';
+    f.src='https://maps.google.com/maps?q=1280%20S%20Kihei%20Rd%20%23106%2C%20Kihei%2C%20HI%2096753&output=embed';
+    mapBtn.replaceWith(f);
+  });}
+</script>
+</body>
+</html>

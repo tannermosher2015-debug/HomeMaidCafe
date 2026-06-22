@@ -1,0 +1,5 @@
+images/source/
+*.recon-raw.json
+# internal recon working docs — not part of the published site
+BRIEF.md
+recon.md
